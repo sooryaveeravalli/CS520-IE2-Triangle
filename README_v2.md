@@ -33,19 +33,7 @@ For more details, refer to:
 ---
 
 ## Control Flow Graph (CFG) Analysis
-
-A **Control Flow Graph (CFG)** represents all possible execution paths within a program. You are provided with the CFG of the `isTriangle.py` file (**`isTriangle_cfg_numbered.png`**).
-
-### **Task:**
-1. Identify execution flow for:
-   - **Normative Cases**: Equilateral, Isosceles, and Scalene triangles.
-   - **Exceptional Cases**: Invalid sides and Triangle inequality violations.
-2. Submit your findings in a **PDF file (`cfg_analysis.pdf`)**.
-
----
-
-## **Generating Control Flow Graph (Optional)**
-If you wish to generate the **CFG yourself**, follow these steps (**Ubuntu/Linux**):
+Follow these steps (**Ubuntu/Linux**) to generate CFG:
 
 ### **Step 1: Install Dependencies**
 ```bash
@@ -70,6 +58,13 @@ A **`.svg` file** will be generated. Open it in a browser to visualize the contr
 
 ---
 
+### **Task:**
+1. Identify execution flow for:
+   - **Normative Cases**: Equilateral, Isosceles, and Scalene triangles.
+   - **Exceptional Cases**: Invalid sides and Triangle inequality violations.
+2. Submit your findings in a **PDF file (`cfg_analysis.pdf`)**.
+
+---
 ## Testing & Analysis
 
 You need to create three test suites in the **`test_suit/`** folder to analyze different coverage metrics.
@@ -106,26 +101,7 @@ Fuzz testing generates **random inputs** to find edge cases. You will use **Fake
 pip install faker
 ```
 
-### **Step 2: Implement Fuzz Testing**
-Create `test_fuzzTesting.py` with the following:
-```python
-from faker import Faker
-from isTriangle import Triangle
-
-fake = Faker()
-
-def generate_random_triangle():
-    return abs(fake.random_int(min=-10, max=20)), abs(fake.random_int(min=-10, max=20)), abs(fake.random_int(min=-10, max=20))
-
-def test_fuzz_triangle():
-    for _ in range(100):
-        a, b, c = generate_random_triangle()
-        result = Triangle.classify(a, b, c)
-        print(f"Testing classify({a}, {b}, {c}) -> {result}")
-
-if __name__ == "__main__":
-    test_fuzz_triangle()
-```
+### Step 2: Implement a test suite **test_fuzzTesting.py**
 
 ### **Step 3: Compare Coverage of Manual vs. Fuzz Testing**
 Run **manual tests**:
