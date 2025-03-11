@@ -27,11 +27,7 @@ Here are more details about ```unittest```: https://docs.python.org/3/library/un
 
 Control flow graph (CFG) helps to assess normative and exception cases from the execution flow. You are given the CFG of the file ```isTriangle.py```. One example normative case is identified for you in the provided image: ```scalene_triangle```.  For a scalene triangle, the execution flow starts at the "classify" function, evaluates the invalid and equality conditions, and then reaches the trian == 0 condition, where the triangle is classified as scalene.
 
-You need to identify the following cases in a similar way:
-
-1. Find the execution flow for two (2) other normative cases from the CFG file: equilateral triangle, and isosceles triangle
-2. Find the execution flow for two (2) exceptional cases from the CFG file: invalid sides and violates triangle inequality
-
+You are asked to answer some queries about this CFG.
 
 # Testing & Analysis
 
