@@ -59,7 +59,7 @@ https://coverage.readthedocs.io/en/7.2.7/
 ## Mutation Testing
 1. You need to create a test suite namely ```test_mutationAdequate.py ```
 2. When you run the command './mutation.sh', you will find a log file ```mutation_output.log``` generated in the directory ```./test_suit```. Check the log file for generated mutants or error messages. 
-3. The mutant detection ratio should be approximately **90%** and above. 
+3. The mutant detection ratio should be approximately **75%** and above. 
 
 NB: python.exe command works for windows system. Use only python if you are working on a UNIX system.
 
